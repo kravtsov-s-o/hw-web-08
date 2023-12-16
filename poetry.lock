@@ -1,12 +1,4 @@
 [[package]]
-name = "async-timeout"
-version = "4.0.3"
-description = "Timeout context manager for asyncio programs"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
 name = "dnspython"
 version = "2.4.2"
 description = "DNS toolkit"
@@ -23,6 +15,17 @@ trio = ["trio (>=0.14,<0.23)"]
 wmi = ["wmi (>=1.5.1,<2.0.0)"]
 
 [[package]]
+name = "faker"
+version = "21.0.0"
+description = "Faker is a Python package that generates fake data for you."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+python-dateutil = ">=2.4"
+
+[[package]]
 name = "mongoengine"
 version = "0.27.0"
 description = "MongoEngine is a Python Object-Document Mapper for working with MongoDB."
@@ -32,6 +35,19 @@ python-versions = ">=3.7"
 
 [package.dependencies]
 pymongo = ">=3.4,<5.0"
+
+[[package]]
+name = "pika"
+version = "1.3.2"
+description = "Pika Python AMQP Client Library"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+gevent = ["gevent"]
+tornado = ["tornado"]
+twisted = ["twisted"]
 
 [[package]]
 name = "pymongo"
@@ -54,40 +70,34 @@ test = ["pytest (>=7)"]
 zstd = ["zstandard"]
 
 [[package]]
-name = "redis"
-version = "5.0.1"
-description = "Python client for Redis database and key-value store"
+name = "python-dateutil"
+version = "2.8.2"
+description = "Extensions to the standard Python datetime module"
 category = "main"
 optional = false
-python-versions = ">=3.7"
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
 
 [package.dependencies]
-async-timeout = {version = ">=4.0.2", markers = "python_full_version <= \"3.11.2\""}
-
-[package.extras]
-hiredis = ["hiredis (>=1.0.0)"]
-ocsp = ["cryptography (>=36.0.1)", "pyopenssl (==20.0.1)", "requests (>=2.26.0)"]
+six = ">=1.5"
 
 [[package]]
-name = "redis-lru"
-version = "0.1.2"
-description = "LRU cache for Python. Use Redis as backend. Provides a dictionary-like object as well as a method decorator."
+name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
 category = "main"
 optional = false
-python-versions = ">=3.4"
-
-[package.dependencies]
-redis = "*"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "d6a16dd77724a02362e64c78ffc5c726cbdc08097ecdd4ebe18b5ccace247b1e"
+content-hash = "86f0e3a477a9cfdea79a13e04b7e9bdad659d906ccd7bf6c54d87b9746ad1317"
 
 [metadata.files]
-async-timeout = []
 dnspython = []
+faker = []
 mongoengine = []
+pika = []
 pymongo = []
-redis = []
-redis-lru = []
+python-dateutil = []
+six = []
