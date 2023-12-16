@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hw-web-08"
+version = "0.0.1"
+description = "NoSQL databases"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pymongo = {extras = ["srv", "tls"], version = "^4.6.1"}
+mongoengine = "^0.27.0"
+redis = "^5.0.1"
+redis-lru = "^0.1.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
